@@ -1,0 +1,37 @@
+---------------------initial setup-------------------------------------
+IDE  -> create and open folder
+create virtual environment (uv package manager):
+    install uv   ("powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" ") or pip install uv
+
+    Initialize a project:
+        uv init
+
+    Create a virtual environment   ("uv venv")
+    Activate it for Windows: .venv\Scripts\activate
+
+Install packages from requirements: (requirements.txt write all the packages to install which gonna to use)
+    uv pip install -r requirements.txt
+    uv add -r requirements.txt
+
+Install packages:
+    Instead of: pip install langchain
+    use: uv pip install langchain
+
+
+----------------------------llm api key--------------------
+gemini_api_key = "xxxxx" (gemini api)
+groq_api_key ="xxxxxxx" (groqcloud)
+OpenAI_api_key ="aadc" (openai api)
+
+put these api keys in .env file
+-----------------------------for pythin notebook------------
+cmd: uv add ipykernel
+
+-----------------------use config of .env-------------
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+os.environ["gemini_api_key"] = os.getenv("gemini_api_key)

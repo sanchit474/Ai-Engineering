@@ -1,0 +1,74 @@
+Why use uv?
+
+uv is a modern Python package and project manager created by Astral. It
+replaces or simplifies several traditional tools such as pip, venv, and
+(for many workflows) poetry.
+
+Why developers use uv
+
+1.  Faster
+
+-   Written in Rust.
+-   Package installation and dependency resolution are significantly
+    faster than pip.
+
+2.  One tool for many tasks Instead of using:
+
+-   python
+-   venv
+-   pip
+-   pip-tools
+-   pyenv
+
+You can use: - uv
+
+Common commands: - uv venv - uv add langchain - uv run app.py - uv
+python install 3.12
+
+3.  Automatic virtual environments Traditional workflow: python -m venv
+    .venv .venv pip install langgraph
+
+With uv: uv add langgraph or uv run app.py
+
+uv automatically uses the project’s virtual environment when
+appropriate.
+
+4.  Better dependency management Instead of manually editing
+    requirements.txt:
+
+    uv add streamlit
+
+This installs the package and updates pyproject.toml.
+
+5.  Python version management Install Python: uv python install 3.12
+
+Pin a version: uv python pin 3.12
+
+6.  Great for AI development Works well with:
+
+-   LangChain
+-   LangGraph
+-   FastAPI
+-   Streamlit
+-   Transformers
+-   OpenAI SDK
+
+Traditional vs uv
+
+Create virtual environment Traditional: python -m venv .venv uv: uv venv
+
+Install packages Traditional: pip install package uv: uv add package or
+uv pip install package
+
+Run application Traditional: python app.py uv: uv run app.py
+
+Manage Python versions Traditional: pyenv (or manual installation) uv:
+uv python install
+
+Recommendation
+
+Learn pip and venv first because they are still widely used in
+tutorials, interviews, and existing projects.
+
+Then use uv for your own projects because it is faster, simpler, and
+increasingly popular in modern Python and AI development.
