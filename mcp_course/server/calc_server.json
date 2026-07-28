@@ -1,0 +1,15 @@
+{
+    "mcpServers":{
+        "calcs": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:/Users/sanch/OneDrive/Desktop/ArtificialIntelligence/mcp_course/server/calcs_server.py"
+      ]
+    }
+}
+}
